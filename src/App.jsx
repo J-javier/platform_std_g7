@@ -1,51 +1,39 @@
-import "bootstrap/dist/css/bootstrap.css";
 import { useState } from "react";
-import alumnosM from "./components/alumnos";
-import Row from "./components/Row";
-import Filter from "./components/Filter";
+import "./index.css";
+import { useNavigate } from "react-router-dom";
 
 function App() {
-  const [filtered, setFiltered] = useState(alumnosM);
+  const [title, setTitle] = useState("");
+  const [password, setPassword] = useState("");
+  const Navigate = useNavigate();
 
-  const handleChange = (e) => {
-    let keyWord = e.target.value.toLowerCase();
-
-    let arr = alumnosM.filter((alumno) => {
-      let name = alumno.name.toLowerCase(); // recibo un string
-
-      return name.includes(keyWord);
-    });
-
-    setFiltered(arr);
+  const submitHandler = (e) => {
+    e.preventDefault();
+    Navigate("/main");
   };
 
-  // const bootstrap = bootstrap();
-
   return (
-    <>
-      
-      <main className="container">
-      <Filter handleChange={handleChange} />
-
-        <h2 className="mt-4">Students Info</h2>
-        <table className="table text-center border">
-          <thead>
-            <tr>
-              <th scope="col">#id</th>
-              <th scope="col">First Name</th>
-              <th scope="col">Last Name</th>
-              <th scope="col">Grade</th>
-              <th scope="col">Age</th>
-              <th scope="col">Delete</th>
-            </tr>
-          </thead>
-          <tbody id="t-body">
-            {filtered.map((alumno, idx) => <Row key={idx} alumno={alumno} /> )}
-          </tbody>
-        </table>
-      </main>
-    </>
+    <div className="container-login">
+      <h1>Login</h1>
+      <form onSubmit={submitHandler}>
+        <input
+          type="text"
+          placeholder="Usuario"
+          onChange={(e) => setTitle(e.target.value)}
+          value={title}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Contraseña"
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button>INGRESAR</button>
+      </form>
+    </div>
   );
 }
 
 export default App;
+// Hebert

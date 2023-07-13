@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+*{
+  
+    font-family: 'Lato', sans-serif;
+  
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-input-placeholder {
+  color: #56585b;
+}
+::-moz-placeholder {
+  color: #56585b;
+}
+:-moz-placeholder {
+  color: #56585b;
+}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  color: #0a0a0b;
+  overflow: hidden;
+  background-color: #93c4d3;
+  display: grid;
+  place-content: center;
+}
+ul,
+nav {
+  list-style: none;
+  padding: 0;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.check {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid #767676;
+  cursor: pointer;
+}
+.checked {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: #ff5846;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.checked svg {
+  fill: white;
+}
+h1 {
+  color: #203b74;
+  font-size: 3rem;
+  text-align: center;
+}
+.container-login {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 400px;
+  height: 300px;
+  padding: 60px;
+}
+.container {
+  background-color: white;
+  min-height: 70vh;
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  width: 500px;
+  height: 650px;
+}
+form {
+  display: block;
+  margin: 2rem 0rem 2rem 0rem;
+}
+form input {
+  padding: 1rem;
+  background-color: #edeef0;
+  border: none;
+  color: #666666;
+  outline: none;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+form button {
+  color: white;
+  border: none;
+  background-color: #ff5846;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  display: block;
+  cursor: pointer;
+  margin: 1rem auto;
+}
+.taskContainer {
+  text-align: center;
+  width: 25rem;
+  margin: 0 auto;
+}
+.task {
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  color: #767676;
+  margin: 1rem 0;
+}
+.titlecheck {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+svg {
+  fill: #767676;
+  cursor: pointer;
+}
+h3 {
+  font-size: 1.5rem;
+}
+.line {
+  text-decoration: line-through;
+}
