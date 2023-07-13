@@ -1,5 +1,19 @@
+/* Solo una prueba */
+
+import {useNavigate} from "react-router-dom";
+
 
 const Filter = ({handleChange}) => {
+
+  const navigate = useNavigate();
+
+    const handleReturn = (e) => {
+        e.preventDefault();
+
+        navigate('/'); 
+      }
+
+
   return (
     <div>
         <h4>Filter:</h4>
@@ -9,6 +23,8 @@ const Filter = ({handleChange}) => {
           id="filter"
           placeholder="filter by name"
         />
+
+        <button className="btn" onClick={handleReturn}>Cerrar Sesion</button>
       </div>
   )
 }
