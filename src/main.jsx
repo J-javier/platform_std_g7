@@ -10,9 +10,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/main" element={<Filter />} />
-        <Route path="*" element={<h1>404 page not found</h1>} />
+        <Route path="/platform_std_g7/" element={<App />} />
+        <Route path="/platform_std_g7/main" element={<Filter />} />
+        <Route path="/platform_std_g7/*" element={<h1>404 page not found</h1>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
